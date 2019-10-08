@@ -31,4 +31,4 @@ set encoding=utf-8 " character encoding used in Vim
 set backspace=start,indent,eol " specifies what <BS>, CTRL-W, etc. can do in Insert mode
 set showcmd " show (partial) command keys in the status line
 set laststatus=2 " always display the status line, even if only one window displayed
-
+set foldmethod=indent " folding type: "manual", "indent", "expr", "marker" or "syntax"
