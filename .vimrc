@@ -3,8 +3,9 @@ Plug 'morhetz/gruvbox'
 cal plug#end()
 
 syntax enable " start using syntax highlighting
-colorscheme gruvbox " Load color scheme
+colorscheme gruvbox " load color scheme
 filetype indent on " enable loading the indent file for specific file types
+filetype plugin on " enable loading the plugin files for specific file types
 
 set background=dark " dark or light the background color brightness
 set ruler " show cursor position below each window
@@ -20,7 +21,7 @@ set number " show the line number for each line
 set autoindent " automatically set the indent of a new line
 set smartindent " do clever autoindenting
 set tabstop=4 " number of spaces a <Tab> in the text stands for
-set shiftwidth=4 " number of spaces used for each step of (auto)indent
+set shiftwidth=4 " number of spaces used for each step of (auto) indent
 set smarttab " a <Tab> in an indent inserts 'shiftwidth' spaces
 set softtabstop=4 " if non-zero, number of spaces to insert for a <Tab>
 set expandtab " expand <Tab> to spaces in Insert mode
@@ -32,3 +33,6 @@ set backspace=start,indent,eol " specifies what <BS>, CTRL-W, etc. can do in Ins
 set showcmd " show (partial) command keys in the status line
 set laststatus=2 " always display the status line, even if only one window displayed
 set foldmethod=indent " folding type: "manual", "indent", "expr", "marker" or "syntax"
+set nrformats=alpha,bin,octal,hex " number formats recognized for CTRL-A and CTRL-X commands
+
+runtime macros/matchit.vim
