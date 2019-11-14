@@ -33,10 +33,7 @@ set backspace=start,indent,eol " specifies what <BS>, CTRL-W, etc. can do in Ins
 set showcmd " show (partial) command keys in the status line
 set laststatus=2 " always display the status line, even if only one window displayed
 set foldmethod=indent " folding type: "manual", "indent", "expr", "marker" or "syntax"
-set nrformats=alpha,bin,octal,hex " number formats recognized for CTRL-A and CTRL-X commands
-set history=200 " how many command lines are remembered 
-
-runtime macros/matchit.vim
+set history=1000 " how many command lines are remembered 
 
 " <C-p> and <C-n> can also filter historical commands
 cnoremap <C-p> <Up>
