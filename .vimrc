@@ -38,3 +38,5 @@ set history=1000 " how many command lines are remembered
 " <C-p> and <C-n> can also filter historical commands
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+" Clear all hightlighted mathes and then redraw the screen
+nnoremap <silent> <C-l> :noh<CR><C-l>
