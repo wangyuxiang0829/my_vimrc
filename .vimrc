@@ -45,21 +45,10 @@ cnoremap <C-n> <Down>
 " Clear all hightlighted mathes and then redraw the screen
 nnoremap <silent> <C-l> :<C-u>noh<CR><C-l>
 " Change the previous * and # behavior in visual mode
-xnoremap * :<C-u>call <SID>VisualStarSearch('/')<CR>/<C-r>=@/<CR><CR>
-xnoremap # :<C-u>call <SID>VisualStarSearch('?')<CR>?<C-r>=@/<CR><CR>
+xnoremap * :<C-u>call my_func#VisualStarSearch('/')<CR>/<C-r>=@/<CR><CR>
+xnoremap # :<C-u>call my_func#VisualStarSearch('?')<CR>?<C-r>=@/<CR><CR>
 " Traversing the buffer list
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
-
-function! s:VisualStarSearch(cmdtype)
-" store the previous content in register s in local variable temp
-    let l:temp = @s
-" copy the selected text into register s
-    normal! gv"sy
-" escape some sepcial characters and then set the search mode register /
-    let @/ = '\V' . substitute(escape(@s, a:cmdtype . '\'), '\n', '\\n', 'g')
-" restore the previous content of register s
-    let @s = temp
-endfunction
