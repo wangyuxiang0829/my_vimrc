@@ -45,8 +45,8 @@ cnoremap <C-n> <Down>
 " Clear all hightlighted mathes and then redraw the screen
 nnoremap <silent> <C-l> :<C-u>noh<CR><C-l>
 " Change the previous * and # behavior in visual mode
-xnoremap * :<C-u>call my_func#VisualStarSearch('/')<CR>/<C-r>=@/<CR><CR>
-xnoremap # :<C-u>call my_func#VisualStarSearch('?')<CR>?<C-r>=@/<CR><CR>
+xnoremap * :<C-u>call func#VisualStarSearch('/')<CR>/<C-r>=@/<CR><CR>
+xnoremap # :<C-u>call func#VisualStarSearch('?')<CR>?<C-r>=@/<CR><CR>
 " Traversing the buffer list
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
